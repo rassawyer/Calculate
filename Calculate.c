@@ -10,39 +10,28 @@ int mul ();
 int divide ();
 int main ()
 {
-    // char S = 'a';
-    char S = 'd';
-    string plus = +;
-    string minus = -;
-    /* Change this to use char with symbols instead of numbers. +,-,/,*(x?)i move switch back up. end "do" with "="*/
-    printf ("Hello, please type the number of the operation you wish to perform, followed by the Enter key \n");
-    printf ("1: Addition, 2: Subtraction, 3: Multiplication, 4: Division \n");
-    do
-    {
-        S = fgetc (stdin);
-        if (strcmp(S, plus) == 0)
+    int A = 1;
+    char op;
+    printf ("Hello, let's see if this works, shall we?\n ");
+    do{
+        switch (op)
         {
-            int add();
+            case '+'
+                void add;
+            break;
+            case '-'
+                void sub;
+            break;
+            case '*'
+                void mul;
+            break;
+            case '/'
+                void div;
+            break;
+            default
+                printf "did not recognize that input; try again.";
+            break;
         }
-        elif (strcmp(S, minus) == 0)
-        {
-            int sub();
-        }
-        /*switch (S)
-        {
-            case +: int add;
-                    break;
-            case -: int sub;
-                    break;
-            case *: int mul;
-                    break;
-            case /: int divide;
-                    break;
-        } */
-    }while (S != =);
-
-    //    int Op = S - '0';
-    //    printf ("%d \n", Op);
-
+    }while (op != '=');
     return 0;
 }
