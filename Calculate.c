@@ -11,26 +11,26 @@ void divide();
 int main ()
 {
     char op = 0;
-    op = getchar();
     printf ("Hello, let's see if this works, shall we?\n ");
     do{
+        op = getchar();
         switch (op)
         {
             case '+':
                 add();
-            break;
+                break;
             case '-':
                 sub();
-            break;
+                break;
             case '*':
                 mul();
-            break;
+                break;
             case '/':
                 divide();
-            break;
+                break;
             default:
                 printf ("did not recognize that input; try again.");
-            break;
+                break;
         }
     }while (op != '=');
     return 0;
