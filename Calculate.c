@@ -4,34 +4,58 @@
 # include <string.h>
 # include <ctype.h>
 
-int add ();
-int sub ();
-int mul ();
-int divide ();
+void add();
+void sub();
+void mul();
+void divide();
 int main ()
 {
-    int A = 1;
-    char op;
+    char op = 0;
+    op = getchar();
     printf ("Hello, let's see if this works, shall we?\n ");
     do{
         switch (op)
         {
-            case '+'
-                void add;
+            case '+':
+                add();
             break;
-            case '-'
-                void sub;
+            case '-':
+                sub();
             break;
-            case '*'
-                void mul;
+            case '*':
+                mul();
             break;
-            case '/'
-                void div;
+            case '/':
+                divide();
             break;
-            default
-                printf "did not recognize that input; try again.";
+            default:
+                printf ("did not recognize that input; try again.");
             break;
         }
     }while (op != '=');
     return 0;
+}
+
+void add ()
+{
+    /* Code will go here. */
+    printf ("Plus.\n");
+}
+
+void sub ()
+{
+    /* Code will go here. */
+    printf ("Subtract.\n");
+}
+
+void mul ()
+{
+    /* Code will go here. */
+    printf ("Multiply.\n");
+}
+
+void divide ()
+{
+    /* Code will go here. */
+    printf ("Divide.\n");
 }
