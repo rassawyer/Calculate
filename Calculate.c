@@ -3,20 +3,27 @@
 # include <math.h>
 # include <string.h>
 # include <ctype.h>
+# include "input.h"
 
 void add();
 void sub();
 void mul();
 void divide();
+struct input input;
+
 int main ()
 {
-    char op = 0;
+    //char op = 0;
     printf ("Hello, let's see if this works, shall we?\n ");
     do{
-        op = getchar();
-        switch (op)
+        scanf("%d", &(input.first));
+        printf("\n");
+        scanf("%c", &(input.op));
+        printf ("entered %d \n", input.first);
+        switch (input.op)
         {
             case '+':
+                input.op = 0;
                 add();
                 break;
             case '-':
@@ -28,11 +35,13 @@ int main ()
             case '/':
                 divide();
                 break;
-            default:
+/*            default:
                 printf ("did not recognize that input; try again.");
                 break;
+*/
         }
-    }while (op != '=');
+    }while (input.op != '=');
+    printf ("entered %d \n", input.first);
     return 0;
 }
 
@@ -40,6 +49,9 @@ void add ()
 {
     /* Code will go here. */
     printf ("Plus.\n");
+    scanf("%d", &(input.sec));
+    input.first = input.first + input.sec;
+
 }
 
 void sub ()
