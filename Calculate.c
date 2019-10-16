@@ -37,10 +37,10 @@ int main ()
                 break;
             case '=':
                 break;
-/*            default:
-                printf ("did not recognize that input; try again.");
-                break;
-*/
+                /*            default:
+                              printf ("did not recognize that input; try again.");
+                              break;
+                              */
         }
     }while (input.op != '=');
     printf ("Result: %d \n", input.first);
@@ -49,27 +49,46 @@ int main ()
 
 void add ()
 {
-    /* Code will go here. */
-    printf ("Plus.\n");
-    scanf("%d", &(input.sec));
-    input.first = input.first + input.sec;
-
+    do{
+        printf ("%d +\n", input.first);
+        scanf("%d", &(input.sec));
+        input.first = input.first + input.sec;
+        scanf("%c", &(input.op));
+    }while (input.op == '+');
 }
 
 void sub ()
 {
     /* Code will go here. */
+    do{
+        printf ("%d -\n", input.first);
+        scanf("%d", &(input.sec));
+        input.first = input.first - input.sec;
+        scanf("%c", &(input.op));
+    }while (input.op == '-');
     printf ("Subtract.\n");
 }
 
 void mul ()
 {
     /* Code will go here. */
+    do{
+        printf ("%d *\n", input.first);
+        scanf("%d", &(input.sec));
+        input.first = input.first * input.sec;
+        scanf("%c", &(input.op));
+    }while (input.op == '*');
     printf ("Multiply.\n");
 }
 
 void divide ()
 {
     /* Code will go here. */
+    do{
+        printf ("%d /\n", input.first);
+        scanf("%d", &(input.sec));
+        input.first = input.first / input.sec;
+        scanf("%c", &(input.op));
+    }while (input.op == '/');
     printf ("Divide.\n");
 }
