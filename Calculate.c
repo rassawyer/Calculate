@@ -19,7 +19,7 @@ int main ()
         scanf("%d", &(input.first));
         printf("\n");
         scanf("%c", &(input.op));
-        printf ("entered %d \n", input.first);
+        printf ("entered %d and %c\n", input.first, input.op);
         switch (input.op)
         {
             case '+':
@@ -35,13 +35,15 @@ int main ()
             case '/':
                 divide();
                 break;
+            case '=':
+                break;
 /*            default:
                 printf ("did not recognize that input; try again.");
                 break;
 */
         }
     }while (input.op != '=');
-    printf ("entered %d \n", input.first);
+    printf ("Result: %d \n", input.first);
     return 0;
 }
 
