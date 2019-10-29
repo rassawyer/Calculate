@@ -18,6 +18,7 @@ int main ()
     do{
         scanf("%d", &(input.first));
         printf("\n");
+        while (getchar () !='\n' );
         scanf("%c", &(input.op));
         printf ("entered %d and %c\n", input.first, input.op);
         switch (input.op)
