@@ -4,16 +4,12 @@
 # include <string.h>
 # include <ctype.h>
 # include "input.h"
+# include "operations.h"
 
-void add();
-void sub();
-void mul();
-void divide();
 struct input input;
 
 int main ()
 {
-    //char op = 0;
     printf ("Hello, let's see if this works, shall we?\n ");
     do{
         scanf("%d", &(input.first));
@@ -24,7 +20,7 @@ int main ()
         switch (input.op)
         {
             case '+':
-                input.op = 0;
+    //            input.op = 0;
                 add();
                 break;
             case '-':
@@ -46,14 +42,4 @@ int main ()
     }while (input.op != '=');
     printf ("Result: %d \n", input.first);
     return 0;
-}
-
-void add ()
-{
-    do{
-        printf ("%d +\n", input.first);
-        scanf("%d", &(input.sec));
-        input.first = input.first + input.sec;
-        scanf("%c", &(input.op));
-    }while (input.op == '+');
 }
