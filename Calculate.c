@@ -33,6 +33,13 @@ int main ()
 			case '/':
 				divide();
 				break;
+			case '=':
+				break;
+			default:
+				printf ("Unrecognized operator; please try again. \n %d", input.first);
+				while (getchar () !='\n' );
+				scanf("%c", &(input.op));
+				break;
 		/*	case '=':
 				break;*/
 		}
