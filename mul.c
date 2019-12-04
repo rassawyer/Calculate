@@ -10,9 +10,9 @@ void mul ()
 {
     /* Code will go here. */
     do{
-        printf ("%d *\n", input.first);
+        printf ("%LG *\n", input.first);
         while (getchar () !='\n' );
-        scanf("%d", &(input.sec));
+        scanf("%LG", &(input.sec));
         input.first = input.first * input.sec;
         while (getchar () !='\n' );
         scanf("%c", &(input.op));

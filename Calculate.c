@@ -11,11 +11,11 @@ struct input input;
 int main ()
 {
 	printf ("Hello, let's see if this works, shall we?\n ");
-	scanf("%d", &(input.first));
+	scanf("%LG", &(input.first));
 	printf(" number 1 \n");
 	while (getchar () !='\n' );
 	scanf("%c", &(input.op));
-	printf ("entered %d and %c\n", input.first, input.op);
+	printf ("entered %LG and %c\n", input.first, input.op);
 	/* add sanity check here to prevent not operators from being stored in input.op. */
 	do{
 		switch (input.op)
@@ -36,7 +36,7 @@ int main ()
 			case '=':
 				break;
 			default:
-				printf ("Unrecognized operator; please try again. \n %d", input.first);
+				printf ("Unrecognized operator; please try again. \n %LG", input.first);
 				while (getchar () !='\n' );
 				scanf("%c", &(input.op));
 				break;
@@ -44,6 +44,6 @@ int main ()
 				break;*/
 		}
 	}while (input.op != '=');
-	printf ("Result: %d \n", input.first);
+	printf ("Result: %LG \n", input.first);
 	return 0;
 }
