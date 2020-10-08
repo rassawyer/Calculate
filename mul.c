@@ -9,13 +9,12 @@
 void mul ()
 {
     /* Code will go here. */
-    do{
-        printf ("%d *\n", input.first);
-        while (getchar () !='\n' );
-        scanf("%d", &(input.sec));
-        input.first = input.first * input.sec;
-        while (getchar () !='\n' );
-        scanf("%c", &(input.op));
-    }while (input.op == '*');
-    printf ("Multiply.\n");
+    printf("Enter digit: ");
+    scanf("%d", &(input.sec));
+
+    input.first = input.result; // so each time the old result gets  to first and so we could use it in displaying
+    input.result = input.result * input.sec;
+    
+    inputOperator();
+    fflush(stdin);
 }

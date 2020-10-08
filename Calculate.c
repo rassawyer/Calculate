@@ -10,36 +10,22 @@ struct input input;
 
 int main ()
 {
-    printf ("Hello, let's see if this works, shall we?\n ");
+    input.op = '_'; // These are here so that while printing input numbers, no garbage value comes up
+    input.sec = 0; 
+
+    printf ("Hello, let's see if this works, shall we?\n");
+
     do{
+        
+        printf("Enter your digit : ");  // I added some prints to make it clear to the user what's happening.
         scanf("%d", &(input.first));
-        printf("\n");
-        while (getchar () !='\n' );
-        scanf("%c", &(input.op));
-        printf ("entered %d and %c\n", input.first, input.op);
-        switch (input.op)
-        {
-            case '+':
-    //            input.op = 0;
-                add();
-                break;
-            case '-':
-                sub();
-                break;
-            case '*':
-                mul();
-                break;
-            case '/':
-                divide();
-                break;
-            case '=':
-                break;
-                /*            default:
-                              printf ("did not recognize that input; try again.");
-                              break;
-                              */
-        }
+        input.result = input.first;
+        inputOperator();
+
     }while (input.op != '=');
-    printf ("Result: %d \n", input.first);
+
+
+    printf ("Result = %d \n", input.result);
+    
     return 0;
 }
