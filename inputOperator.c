@@ -8,14 +8,16 @@
 
 void inputOperator(){
 
+    printf ("\n[ %d %c %d = %d ]\n", input.first, input.op, input.sec, input.result); // A cute little addition
+
         printf("\nEnter an operator : ");
-        fflush(stdin);  // This will take care of the new operator
+        fflush(stdin);  // This will take care of the new operator by flushing old input buffer
         scanf("%c", &(input.op));
 
         switch (input.op)
         {
             case '+':
-    //            input.op = 0;
+    //            input.op = 0; // I don't know why you commented this here, so I'm gonna leave it like thhat
                 add();
                 break;
             case '-':
@@ -34,5 +36,6 @@ void inputOperator(){
                 inputOperator();
             
         }
+         
     
 }
